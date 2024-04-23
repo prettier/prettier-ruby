@@ -23,29 +23,13 @@
     "prettier": "^3.0.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.1.1",
     "eslint": "^9.0.0",
     "eslint-config-prettier": "^9.0.0",
     "husky": "^9.0.2",
     "jest": "^29.5.0",
     "prettier": "^3.1.0",
     "pretty-quick": "^4.0.0"
-  },
-  "eslintConfig": {
-    "extends": [
-      "eslint:recommended",
-      "prettier"
-    ],
-    "env": {
-      "jest": true,
-      "node": true
-    },
-    "parserOptions": {
-      "ecmaVersion": 2020,
-      "sourceType": "module"
-    },
-    "rules": {
-      "no-undef": "off"
-    }
   },
   "jest": {
     "globalSetup": "./test/js/globalSetup.js",

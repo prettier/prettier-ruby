@@ -105,7 +105,7 @@ export async function spawnServer(opts, killOnExit = true) {
           const pid = process.platform === "win32" ? server.pid : -server.pid;
           process.kill(pid);
         }
-      } catch (error) {
+      } catch {
         // If there's an error killing the process, we're going to ignore it.
       }
     });
