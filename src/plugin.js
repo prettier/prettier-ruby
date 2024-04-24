@@ -76,7 +76,9 @@ export async function spawnServer(opts, killOnExit = true) {
 
   if (opts.filepath) {
     const prettierConfig = await resolveConfigFile(opts.filepath);
-    options.cwd = path.dirname(prettierConfig);
+    if (prettierConfig) {
+      options.cwd = path.dirname(prettierConfig);
+    }
   }
 
   const server = spawn(
