@@ -71,7 +71,8 @@ export async function spawnServer(opts, killOnExit = true) {
   const options = {
     env: Object.assign({}, process.env, { LANG: getLang() }),
     stdio: ["ignore", "ignore", "inherit"],
-    detached: true
+    detached: true,
+    shell: true // TODO: allow user to select shell
   };
 
   if (opts.filepath) {
